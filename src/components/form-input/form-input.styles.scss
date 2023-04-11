@@ -1,0 +1,83 @@
+$main-color: black;
+$sub-color: #5e5c5c;
+
+@mixin shrinkLabel {
+  top: -14px;
+  font-size: 12px;
+  color: $main-color;
+}
+
+.form-group {
+  margin: 45px 0;
+  position: relative;
+
+  h4 {
+    margin: 5px;
+  }
+
+  .form-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $sub-color;
+    font-size: 18px;
+    color: $sub-color;
+    padding: 10px 10px 10px 5px;
+    display: block;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ .form-input-label {
+      @include shrinkLabel();
+    }
+  }
+
+  input[type='password'] {
+    letter-spacing: 0.3rem;
+  }
+
+  .form-input-label {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    color: $sub-color;
+    pointer-events: none;
+    transition: 300ms all ease;
+
+    &.shrink {
+      @include shrinkLabel();
+    }
+
+    &.social-media-label {
+      display: flex;
+      align-items: center;
+
+      .fab {
+        padding-right: 1rem;
+
+        &.fa-twitter {
+          color: #38a1f3;
+        }
+        &.fa-linkedin {
+          color: #0077b5;
+        }
+        &.fa-youtube {
+          color: #c4302b;
+        }
+        &.fa-facebook {
+          color: #3b5998;
+        }
+        &.fa-instagram {
+          color: #3f729b;
+        }
+      }
+    }
+  }
+
+  small.form-text {
+    display: block;
+    margin-top: 0.3rem;
+    color: #888;
+  }
+}

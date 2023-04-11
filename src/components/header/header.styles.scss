@@ -1,0 +1,32 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  padding: 1rem 3rem;
+  opacity: 0.9;
+  border-bottom: #17a2b8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-links {
+    display: flex;
+  }
+
+  .logo,
+  .nav-link {
+    color: white;
+    cursor: pointer;
+  }
+
+  .logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+
+  .nav-link {
+    padding: 0 0.7rem;
+  }
+}
